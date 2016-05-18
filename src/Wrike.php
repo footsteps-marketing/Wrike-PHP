@@ -81,7 +81,7 @@ class Wrike
             $this->provider->authorize(
                 [],
                 function ($url, $oauth) {
-                    $_SESSION[ 'wrike_oauth2_state' ] = $this->provider->getState();
+                    $_SESSION[ 'wrike_oauth2_state' ] = $oauth->getState();
                     header('Location: ' . $url);
                     exit;
                 }

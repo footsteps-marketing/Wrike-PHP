@@ -77,7 +77,7 @@ class Folders
         return $this->owner->requestFactory(
             [
                 "method" => "GET",
-                "action" => "/accounts/{$accountId}/folders",
+                "action" => "/folders/{$folderId}/folders",
                 "params" => $params,
             ]
         );
